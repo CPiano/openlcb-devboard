@@ -36,16 +36,20 @@ Eagle projects for OpenLCB development boards
 In general, merging schematic, board, and library files doesn't work. Git should be looked
 at as a history of revisions but not as a way to manage multiple branches of the same design.
 Use the following rules of thumb:
+
 1. Each subdirectory of **projects** should have an "owner" who should control edits to the
    schematic and pcb files. Ultimately the owner of the board should make changes to these
    files and others should provide feedback outside of Eagle. It is advisable that comments
    on schematics be entered as issues on Github so that the conversation is captured and not
    lost to the abyss that is email.  
+
 2. Markdown files can be merged by Git, so they can be changed through a normal fork and pull
    request mechanism.
+
 3. Anyone can start a new project by forking the repository, adding a subdirectory of 
    **projects** and creating a new board. This board can then be submitted back to the main
    repository through pull request.
+
 4. Libraries also cannot be merged reliably. There is no problem with adding new libraries,
    but they shouldn't be deleted. Caution should be used when updating the version of libraries
    to be sure that the change is backward compatible.  
